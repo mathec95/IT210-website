@@ -13,14 +13,25 @@ This is an outline of a basic HTML page. Feel free to make any changes you would
 	<body>
 		<section>
 			<header>
+				<script src= "/var/www/css/bootstrap.css"><script>
+				<script src= "/var/www/custom.css"><script>
+				<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+				<script src="/var/www/js/bootstrap.js"></script>
 				<h1>Welcome!!</h1>
 			</header>
 			
 			<nav>
-				<a href="#">Home</a> |
-				<a href="#">First Page</a> |
-				<a href="#">Second Page</a> |
-				<a href="#">Third Page</a>
+				<li><a href="/var/www/home.html">Home</a></li>
+				<li><a href="/var/www/endorsements.html">Endorsements</a></li>
+				<li><a href="#">Projects</a>
+					<ul class="#">
+							<li><a href="/var/www/projects.html">Project 1</a></li>
+							<li><a href="/var/www/projects.html">Project 2</a></li>
+							<li><a href="/var/www/projects.html">Project 3</a></li>
+					</ul>
+				</li>
+				<li><a href="/var/www/aboutme.html">About Me</a></li>
+				<li><a href="/var/www/contact.html">Contact</a></li>
 			</nav>
 				
 			<article>
@@ -38,5 +49,10 @@ This is an outline of a basic HTML page. Feel free to make any changes you would
 				</p>
 			</footer>
 		</section>
+		<script>
+		$(document).ready(function () {
+		$('.dropdown-toggle').dropdown();
+		});
+</script>
 	</body>
 </html>
