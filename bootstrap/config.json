@@ -6,16 +6,16 @@
     "@gray": "lighten(@gray-base, 33.5%)",
     "@gray-light": "lighten(@gray-base, 46.7%)",
     "@gray-lighter": "lighten(@gray-base, 93.5%)",
-    "@brand-primary": "darken(#2771a3, 6.5%)",
-    "@brand-success": "#5cb85c",
-    "@brand-info": "#5bc0de",
+    "@brand-primary": "darken(#428bca, 6.5%)",
+    "@brand-success": "#5cb85e",
+    "@brand-info": "#5bc0dd",
     "@brand-warning": "#f0ad4e",
-    "@brand-danger": "#d9534f",
+    "@brand-danger": "#d9534e",
     "@body-bg": "#fff",
     "@text-color": "@gray-dark",
     "@link-color": "@brand-primary",
-    "@link-hover-color": "darken(@link-color, 10%)",
-    "@link-hover-decoration": "none",
+    "@link-hover-color": "darken(@link-color, 15%)",
+    "@link-hover-decoration": "underline",
     "@font-family-sans-serif": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
     "@font-family-serif": "Georgia, \"Times New Roman\", Times, serif",
     "@font-family-monospace": "Menlo, Monaco, Consolas, \"Courier New\", monospace",
@@ -430,5 +430,6 @@
     "collapse.js",
     "scrollspy.js",
     "transition.js"
-  ]
+  ],
+  "customizerUrl": "https://getbootstrap.com/docs/3.3/customize/?id=63ceae9b006a1d54479dfb1dd40f3922"
 }
