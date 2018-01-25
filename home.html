@@ -1,104 +1,66 @@
 <!DOCTYPE HTML>
 
-<!--
-Created by:Tyler Bristow
-This is an outline of a basic HTML page. Feel free to make any changes you would like.
--->
-
 <html>
 	<head>
 	<meta charset="utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
-	<link rel="favicon" href="favicon.ico";/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+	<link rel="shortcut icon" href="favicon.webp">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>	
+	<link rel="stylesheet" type="text/css" href="css/mycss.css"/>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 		<title>My Home Page</title>
 	</head>
-	<body>
+	<body ID="SITE_BACKGROUND">
 		<section>
-			<header style="position:relative">
-				<h1>Home</h1>
+			<header>
+				<h1 ID="HEADER">Home</h1>
 			</header>
-			<nav>
-				<ul>
-					<a class="menu" href="home.html">Home</a>
-					<a class="menu" href="aboutme.html">About Me</a>
-					<a class="menu" href="endorsements.html">Endorsements</a>
-					<div class="dropdown">
- 						<button class="dropbtn">Projects</button>
-  						<div class="dropdown-content">
-    						<a href="project1.html">Project 1</a>
-    						<a href="project2.html">Project 2</a>
-    						<a href="project3.html">Project 3</a>
+			<div class="container">
+				<ul class="nav nav-tabs nav-justified" role="tablist">
+					<li class="active"><a href="home.html">
+						<span class="glyphicon glyphicon-home"></span>Home</a></li>
+					<li><a href="aboutme.html">
+						<span class="glyphicon glyphicon-user"></span>About Me</a></li>
+					<li><a href="endorsements.html">
+						<span class="glyphicon glyphicon-heart"></span>Endorsements</a>
+						</li>
+  						<div class="dropdown">
+  							<button class="btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+  								<span class="glyphicon glyphicon-book"></span>Projects
+  							<span class="caret"></span></button>
+    						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+    							<li role="presentation"><a role="menuitem" tabindex="-1" href="project1.html">Project 1</a></li>
+    							<li role="presentation"><a role="menuitem" tabindex="-1" href="project2.html">Project 2</a></li>
+    							<li role="presentation"><a role="menuitem" tabindex="-1" href="project3.html">Project 3</a></li>
+    						</ul>
   						</div>
-					</div>
-					<a class="menu" href="contact.html">Contact</a>
+					<li><a href="contact.html">
+						<span class="glyphicon glyphicon-phone-alt"></span>Contact</a></li>
 				</ul>
-			</nav>
+			</div>
 				
 			<article>
-				<div class="transition-div"><h2 id="header">Short Bio</h2></div>
-				<img src="http://me.byu.edu/sites/default/files/byu_logo.gif" style="float:right" alt="BYU logo"/>
+				<div><h2 ID="HEADER">Short Bio</h2></div>
+				<img class="img-responsive" src="http://me.byu.edu/sites/default/files/byu_logo.gif" style="float:right" alt="BYU logo" width="20%" height="20%"/>
+				<div class="BACKGROUND">I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
 				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </div>
 				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+				<div ID="TEXTCOLOR">I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div> 
 				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				<div class="relative">This div has position: relative
-					<div class="absolute">This div has position absolute inside the other div</div>
-				</div>
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				<div class="sticky">This is a sticky div.</div>
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-				
+				I go to BYU. I was a 210 student and I can't seem to think of what to write here. Here is random text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 			</article>
-			
-		
 			<footer>
-				<p>I am the very best of all the IT students</p>
+				<p id="footer">I am the very best of all the IT students</p>
 			</footer>
 		</section>
+		<script>
+			$(document).ready(function () {
+			$('.dropdown-toggle').dropdown();
+			});
+		</script>
 	</body>
 </html>
 
