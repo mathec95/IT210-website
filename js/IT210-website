@@ -1,0 +1,71 @@
+function Jfalse() {
+	return 0;
+}
+function clear() {
+	localStorage.removeItem("name");
+	localStorage.removeItem("date");
+}
+function saveName() {
+	localStorage.name= document.getElementById("name").value;
+}
+function saveDate() {
+	localStorage.date= document.getElementById("date").value;
+}
+function load() {
+	if (localStorage.name) {
+		localStorage.name= document.getElementById("name").value= localStorage.name;
+	};
+	if (localStorage.date) {
+		localStorage.date= document.getElementById("date").value= localStorage.date;
+	};
+}
+function display() {
+	var initial = "";
+	var toPrint = JSON.parse(localStorage.endorsements);
+	for (var i = 0; i < toPrint.length; i++) {
+		initial += toPrint[i].name + " " + toPrint[i].date + "<br>";
+	};
+	document.getElementById("endorsements").innerHTML = initial;
+}
+function storeEndorsement() {
+	var initialName;
+	var initialdate = "00-00-0000";
+	var name = document.getElementById("name").value;
+	var date = document.getElementById("date").value;
+	clear();
+	initialName = "";
+	initialdate = "";
+	document.getElementById("name").innerHTML = initialName;
+	var myJson = [];
+	if (localStorage.endorsements) {
+		myJson = JSON.parse(localStorage.endorsements);
+	};
+	myJson.push({"name":name, "date":date});
+	var toStore = JSON.stringify(myJson);
+	localStorage.endorsements = toStore;
+	display();
+}
+function sortName() {
+	if (localStorage.endorsements) {
+		var allEndos = JSON.parse(localStorage.endorsements);
+		allEndos.sort(function(a,b) {
+			if (a.name < b.name) return -1;
+			if (a.name > b.name) return 1;
+			return 0;
+		});
+		localStorage.endorsements = JSON.stringify(allEndos);
+	}
+	display();
+}
+function sortDate() {
+	if (localStorage.endorsements) {
+		var allEndos = JSON.parse(localStorage.endorsements);
+		allEndos.sort(function(a,b) {
+			if (a.date < b.date) return -1;
+			if (a.date > b.date) return 1;
+			return 0;
+		});
+		localStorage.endorsements = JSON.stringify(allEndos);
+	}
+	display();
+}
