@@ -1,33 +1,43 @@
 <?php
-include "/var/www/settings.php";
+include ('settings.php');
 
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
+$name = $_POST["username"];
+$pass = sha1($_POST["password"]);
+
+$sql = "SELECT * FROM Users WHERE username = ? AND password = ?";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("ss", $name, $pass);
+$stmt->execute();
+$result = $stmt->get_result();
+$data = $result->fetch_all(MYSQLI_ASSOC);
+echo json_encode($data);
+$stmt->close();
+
+if ($data)
+{
+    $sql_update = "UPDATE Users SET logged_in = 1 WHERE username = ?";
+    $stmt = $conn->prepare($sql_update);
+    $stmt->bind_param("s", $name);
+    $stmt->execute();
+    $stmt->close();
+    session_start();
+    $_SESSION['logged_in'] = TRUE;
+    $_SESSION['username'] = $name;
+    $_SESSION['userId'] = $data[0]['userId'];
+//    setcookie("logged_in", "1", time()+3600, "/");
+//    setcookie("username", $name, time()+3600, "/");
+//    setcookie("logged_out", "", time()-60, "/");
+    header('Location: contact.php');
+    exit;
 }
-
-$sql = "SELECT * FROM Users";
-if($result = mysqli_query($link, $sql)){
-    if(mysqli_num_rows($result) > 0){
-        echo "<table>";
-            echo "<tr>";
-                echo "<th>userId</th>";
-                echo "<th>password</th>";
-            echo "</tr>";
-        while($row = mysqli_fetch_array($result)){
-            echo "<tr>";
-                echo "<td>" . $row['userId'] . "</td>";
-                echo "<td>" . $row['password'] . "</td>";
-            echo "</tr>";
-        }
-        echo "</table>";
-        // Free result set
-        mysqli_free_result($result);
-    } else{
-        echo "No records matching your query were found.";
-    }
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+else
+{
+    session_start();
+//    setcookie("loginfail", "1", time()+60, "/");
+    $_SESSION['wrong_log_in'] = TRUE;
+    header('Location: login.php');
+    exit;
 }
-
-mysqli_close($link);
+$conn->close();
 ?>
